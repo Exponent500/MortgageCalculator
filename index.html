@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mortgage Calculator</title>
+    <!-- Latest compiled and minified Bootstrap CSS from Max CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Mortgage Calculator Form -->
+        <form class="form-horizontal"> 
+            <fieldset>
+            
+            <!-- Form Name -->
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-4"> 
+                    <legend>jQuery Mortgage Calculator</legend>
+                </div>
+            </div>
+            
+            <!-- Loan Balance Input Field-->
+            <div class="form-group"> 
+                <label class="control-label col-md-4" for="loan-balance">Loan Balance ($)</label> <!-- Bootstrap class of control-label does... -->
+                <div class="col-md-4">
+                    <input class="form-control" type="number" id="loan-balance" name="loan-balance">
+                </div>
+            </div>
+
+            <!-- APR(%) Input Field-->
+            <div class="form-group">
+                <label class="control-label col-md-4" for="interest-rate">APR (%)</label>
+                <div class="col-md-4">
+                    <input class="form-control" type="number" id="interest-rate" name="interest-rate">
+                </div>
+            </div>
+
+            <!-- Loan Term Input Field-->
+            <div class="form-group">
+                <label class="control-label col-md-4" for="loan-term">Loan Term (years)</label>
+                <div class="col-md-4">
+                    <input class="form-control" type="number" id="loan-term" name="loan-term">
+                </div>
+            </div>
+
+            <!-- Loan Period Pull-down Menu -->
+            <div class="form-group">
+                <label class="control-label col-md-4" for="loan-period">Period</label>
+                <div class="col-md-4">
+                    <select class="form-control" id="loan-period" name="loan-period"> 
+                        <option value="12">Monthly</option>
+                        <option value="6">Bi-Monthly</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-4"> 
+                    <button class="btn btn-primary" type="button" id ="calculate-button" name="calculate-button">Calculate</button> 
+                </div>
+            </div>
+
+            <!-- Space reserverd for mortgage payment result to be displayed -->
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-4">
+                    <pre><p id="monthly-payment"></p></pre>
+                </div>
+            </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <!-- minified jQuery (necessary for Bootstrap's Javascript plugins (from Google's CDN))-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Includes all compiled Bootstrap minified Javascript plugins (from Max CDN) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--My custom Javascript-->
+    <script src="index.js"></script>
+</body>
+
+</html>
